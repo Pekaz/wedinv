@@ -37,7 +37,7 @@ const myContentSpec: ContentSpec = {
   ogTitle: "박성진 ♡ 권수지 청첩장",
   ogDesc: "7월 20일에 결혼합니다.",
   ogImageUrl:
-    "https://drive.google.com/file/d/1rOqMIkHL7JYuoOfnGBABywkUL0cPfdqW/view?usp=sharing",
+    "https://drive.google.com/uc?id=1rOqMIkHL7JYuoOfnGBABywkUL0cPfdqW",
 
   groomFullName: "박성진",
   brideFullName: "권수지",
