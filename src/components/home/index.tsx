@@ -1,6 +1,5 @@
 import { Copy, EmojiLookLeft, EmojiLookRight, PinAlt } from "iconoir-react";
 import Image from "next/image";
-import Link from "next/link";
 import React, {
   Fragment,
   MouseEventHandler,
@@ -22,8 +21,8 @@ import { useSessionStorage } from "@/common/hooks/useStorage";
 import timeDiffFormat from "@/common/utils/timeDiffFormat";
 import Modal from "@/components/common/Modal";
 import { Content } from "@/content";
-import coverPic from "@/public/photos/cover_min.jpg";
-import mapPic from "@/public/photos/map.gif";
+import coverPic from "@/public/photos/cover_min.png";
+import mapPic from "@/public/photos/map.png";
 import { GetTalkListResponse, Party, Talk } from "@/talk/types";
 import {
   BoxShadowStyle,
@@ -61,31 +60,6 @@ const CoverPicWrap = styled.div`
   border-radius: 30px;
   overflow: hidden;
   line-height: 0;
-`;
-
-const LiveButton = styled.button`
-  padding: 8px 16px;
-  border: 0;
-  border-radius: 8px;
-  margin: 12px 10px;
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  background: rgba(255, 136, 170);
-
-  animation: color-change 1s infinite;
-
-  @keyframes color-change {
-    0% {
-      background: rgba(255, 136, 170, 0.7);
-    }
-    50% {
-      background: rgb(255, 136, 170);
-    }
-    100% {
-      background: rgba(255, 136, 170, 0.7);
-    }
-  }
 `;
 
 const GreetingP = styled.p`
@@ -567,11 +541,6 @@ const Home = ({ content: c }: HomeProps) => {
         <br />
         {c.venue.desc}
       </p>
-      {c.link && (
-        <Link href={c.link.url} passHref>
-          <LiveButton>{c.link.label}</LiveButton>
-        </Link>
-      )}
 
       <SectionHr />
 
@@ -631,7 +600,8 @@ const Home = ({ content: c }: HomeProps) => {
       <SectionHeader>오시는 길</SectionHeader>
       <Image src={mapPic} width={400} alt="" />
       <p>
-        {c.venue.address}
+        {c.venue.address} <br />
+        {c.venue.address2}
         <br />
         {c.venue.desc}
       </p>
@@ -666,43 +636,6 @@ const Home = ({ content: c }: HomeProps) => {
         </p>
       </GiveWrap>
       <SectionHr />
-      <SectionHeader>축하의 한마디</SectionHeader>
-      <WriteSectionSubHeader>
-        <p>신랑측</p>
-        <p>신부측</p>
-      </WriteSectionSubHeader>
-      <div style={{ clear: "both" }} />
-      <TalkWrap>
-        <WriteButtonTrigger ref={writeButtonTriggerRef} />
-        {talkListResp?.talks.map((talk) => (
-          <TalkBubble
-            key={talk.id}
-            talk={talk}
-            selected={talk.id === selectedTalkId}
-            onBubbleClick={handleTalkBubbleClick}
-            onEditClick={handleTalkEditClick}
-          />
-        ))}
-      </TalkWrap>
-      <ThankYou>{writeDone ? "감사합니다." : ""}</ThankYou>
-      {!writeDone && (
-        <WriteButton
-          visible={isWriteButtonShown}
-          onClick={handleWriteButtonClick}
-        >
-          😍 나도 한마디
-        </WriteButton>
-      )}
-      {showWriteTalkModal && (
-        <Modal handleClose={handleWriteTalkModalClose}>
-          <WriteTalk onWrite={handleWriteTalk} />
-        </Modal>
-      )}
-      {showEditTalkModal && (
-        <Modal handleClose={handleEditTalkModalClose}>
-          <EditTalk talk={showEditTalkModal} onEdit={handleEditTalk} />
-        </Modal>
-      )}
     </Main>
   );
 };

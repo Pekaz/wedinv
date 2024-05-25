@@ -17,6 +17,7 @@ export type ContentSpec = {
   venue: {
     desc: string;
     address: string;
+    address2?: string;
     kakaoMapUrl: string;
     naverMapUrl: string;
   };
@@ -31,40 +32,43 @@ export type ContentSpec = {
 };
 
 const myContentSpec: ContentSpec = {
-  htmlTitle: "박영훈 ♡ 김현주",
-  htmlDesc: "박영훈 ♡ 김현주 10월 3일에 결혼합니다.",
-  ogTitle: "박영훈 ♡ 김현주 청첩장",
-  ogDesc: "10월 3일에 결혼합니다.",
+  htmlTitle: "박성진 ♡ 권수지",
+  htmlDesc: "박성진 ♡ 권수지 7월 20일에 결혼합니다.",
+  ogTitle: "박성진 ♡ 권수지 청첩장",
+  ogDesc: "7월 20일에 결혼합니다.",
   ogImageUrl:
-    "https://drive.google.com/uc?id=1kf4TQN50LQyEybKT844g6CLq7nXeG6cl",
+    "https://drive.google.com/file/d/1rOqMIkHL7JYuoOfnGBABywkUL0cPfdqW/view?usp=sharing",
 
-  groomFullName: "박영훈",
-  brideFullName: "김현주",
-  datetime: "2021년 10월 3일 일요일 오후 1시",
+  groomFullName: "박성진",
+  brideFullName: "권수지",
+  datetime: "2024년 7월 20일 토요일 오전 11시",
   venue: {
-    desc: "반포 JW 메리어트 호텔 5층 그랜드볼룸",
-    address: "서울 서초구 신반포로 176",
-    kakaoMapUrl: "https://place.map.kakao.com/8005133",
-    naverMapUrl: "https://map.naver.com/v5/entry/place/11583195",
+    desc: "양재 엘블레스 다이아몬드홀",
+    address: "서울시 서초구 강남대로 213 지하 1층",
+    address2: "(지하철 3호선 양재역 9번 출구)",
+    kakaoMapUrl: "https://place.map.kakao.com/607282159",
+    naverMapUrl: "https://map.naver.com/p/entry/place/37688101",
   },
-  link: { label: "📹 결혼식 생중계 보러가기", url: "/live" },
+  link: { label: "", url: "" },
   greeting: {
     title: "결혼합니다.",
     content: [
-      `청명한 가을날
-        새로이 시작하는 작은 사랑이
-        보다 크고 깊은 사랑이 되려고 합니다.
-        함께 자리하시어 축복해 주시면
-        더없는 기쁨이겠습니다.`,
-      `김종오 · 강경자의 장녀 현주
-        박민양 · 최승현의 차남 영훈`,
+      `회사 동료로 시작했던 우리의 인연이 
+      어느새 친구가 되고, 연인이 되고, 
+      이제 부부의 연을 맺고자 합니다.
+      
+      초록빛 싱그러운 여름,
+      보다 크고 깊은 사랑이 완성되는
+      그 시작의 자리에 함께해 주시기를 바랍니다.`,
+      `권양호 · 임미영의 장녀 수지
+        박시영 · 김연옥의 아들 성진`,
     ],
   },
-  groomContact: "tel:01071056849",
-  brideContact: "tel:01073692869",
+  groomContact: "tel:01031350378",
+  brideContact: "tel:01033985746",
   galleryThumbPosition: {}, // e.g. { "p03.jpeg": "bottom" },
-  groomGive: [{ name: "박영훈", account: "카카오뱅크 3333-07-0052253" }],
-  brideGive: [{ name: "김현주", account: "우리은행 1002-291-920831" }],
+  groomGive: [{ name: "박성진", account: "우리은행 1002-941-504941" }],
+  brideGive: [{ name: "권수지", account: "우리은행 1002-962-551597" }],
 };
 
 export default myContentSpec;
