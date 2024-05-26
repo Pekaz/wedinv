@@ -19,6 +19,7 @@ import { Content } from "@/content";
 import coverPic from "@/public/photos/cover_min.png";
 import mapPic from "@/public/photos/map.png";
 import { Main, SectionHeader, SectionHr, TextSansStyle } from "./styles";
+import FloatModal from "../common/FloatModal";
 
 const Header = styled.h1`
   display: inline-block;
@@ -227,9 +228,12 @@ const GiveWrap = styled.div`
 `;
 
 const CopyTextButton = styled.button`
+  ${TextSansStyle}
+  font-size: 13px;
   padding: 0;
   border: none;
   background: none;
+  font-weight: 200;
 
   svg {
     width: 20px;
@@ -260,23 +264,29 @@ const CopyText = ({ text }: { text: string }) => {
       {text}
       <CopyTextButton onClick={handleCopyText} aria-label="복사">
         <Copy />
+        복사
       </CopyTextButton>
     </>
   );
 };
 
 const SendButton = styled.button`
+  ${TextSansStyle}
   width: 120px;
   height: 40px;
   background-color: white;
   border-radius: 5px;
   color: black;
-  border-color: black;
+  border: 1px solid gray;
+  font-weight: 200;
 `;
 
 const SendModal = styled.div`
-  padding: 40px;
+  padding: 20px;
   background-color: white;
+  width: 90%;
+  border-radius: 10px;
+  border: 1px solid black;
 `;
 
 const SendTextDiv = styled.div`
@@ -402,17 +412,18 @@ const Home = ({ content: c }: HomeProps) => {
             신랑측
           </SendButton>
           {showSendGroomModal && (
-            <Modal handleClose={handleSendModalClose}>
+            <FloatModal handleClose={handleSendModalClose}>
               <SendModal>
                 {c.groomGive.map((g) => (
                   <Fragment key={g.account}>
                     <SendTextDiv>
-                      {g.name} <CopyText text={g.account} />
+                      {g.name} <br />
+                      <CopyText text={g.account} />
                     </SendTextDiv>
                   </Fragment>
                 ))}
               </SendModal>
-            </Modal>
+            </FloatModal>
           )}
         </p>
         <p>
@@ -420,16 +431,17 @@ const Home = ({ content: c }: HomeProps) => {
             신부측
           </SendButton>
           {showSendBrideModal && (
-            <Modal handleClose={handleSendModalClose}>
+            <FloatModal handleClose={handleSendModalClose}>
               <SendModal>
                 {c.brideGive.map((g) => (
                   <Fragment key={g.account}>
-                    {g.name} <CopyText text={g.account} />
+                    {g.name} <br />
+                    <CopyText text={g.account} />
                     <br />
                   </Fragment>
                 ))}
               </SendModal>
-            </Modal>
+            </FloatModal>
           )}
         </p>
       </GiveWrap>
