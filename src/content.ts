@@ -76,6 +76,7 @@ const myContentSpec: ContentSpec = {
   brideGive: [
     { name: "권수지", account: "우리은행 1002-962-551597" },
     { name: "권양호(부)", account: "우리은행 126-08-327394" },
+    { name: "임미영(모)", account: "우리은행 1002-740-314961" },
   ],
 };
 
