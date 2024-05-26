@@ -270,11 +270,17 @@ const SendButton = styled.button`
   height: 40px;
   background-color: white;
   border-radius: 5px;
+  color: black;
+  border-color: black;
 `;
 
 const SendModal = styled.div`
   padding: 40px;
   background-color: white;
+`;
+
+const SendTextDiv = styled.div`
+  padding: 10px;
 `;
 
 type HomeProps = { content: Content };
@@ -400,8 +406,9 @@ const Home = ({ content: c }: HomeProps) => {
               <SendModal>
                 {c.groomGive.map((g) => (
                   <Fragment key={g.account}>
-                    {g.name} <CopyText text={g.account} />
-                    <br />
+                    <SendTextDiv>
+                      {g.name} <CopyText text={g.account} />
+                    </SendTextDiv>
                   </Fragment>
                 ))}
               </SendModal>
