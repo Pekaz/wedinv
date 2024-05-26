@@ -1,5 +1,6 @@
 export type Content = ContentSpec & {
   photos: { url: string; objectPosition?: string }[];
+  orgPhotos: { url: string; objectPosition?: string }[];
 };
 
 export type ContentSpec = {

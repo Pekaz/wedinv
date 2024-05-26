@@ -36,6 +36,15 @@ export const getStaticProps: GetStaticProps = () => {
         ? { objectPosition: myContentSpec.galleryThumbPosition[fname] }
         : {}),
     }));
-  const content: Content = { ...myContentSpec, photos };
+  const orgPhotos: Content["orgPhotos"] = fs
+    .readdirSync("./public/photos/org")
+    .sort()
+    .map((fname) => ({
+      url: "/photos/org/" + fname,
+      ...(myContentSpec.galleryThumbPosition[fname]
+        ? { objectPosition: myContentSpec.galleryThumbPosition[fname] }
+        : {}),
+    }));
+  const content: Content = { ...myContentSpec, photos, orgPhotos };
   return { props: { content } };
 };

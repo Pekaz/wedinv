@@ -1,12 +1,6 @@
 import { Copy, EmojiLookLeft, EmojiLookRight, PinAlt } from "iconoir-react";
 import Image from "next/image";
-import React, {
-  Fragment,
-  useCallback,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import React, { Fragment, useCallback, useRef, useState } from "react";
 import QuickPinchZoom, {
   make3dTransformValue,
   UpdateAction,
@@ -384,7 +378,7 @@ const Home = ({ content: c }: HomeProps) => {
       {showGalleryModal && (
         <Modal handleClose={handleGalleryModalClose}>
           <PhotoGallery
-            photos={c.photos}
+            photos={c.orgPhotos}
             initialSlide={lastClickedGalleryItem}
             onClose={handleGalleryModalClose}
           />
@@ -436,9 +430,10 @@ const Home = ({ content: c }: HomeProps) => {
               <SendModal>
                 {c.brideGive.map((g) => (
                   <Fragment key={g.account}>
-                    {g.name} <br />
-                    <CopyText text={g.account} />
-                    <br />
+                    <SendTextDiv>
+                      {g.name} <br />
+                      <CopyText text={g.account} />
+                    </SendTextDiv>
                   </Fragment>
                 ))}
               </SendModal>
