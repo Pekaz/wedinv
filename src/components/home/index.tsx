@@ -278,6 +278,7 @@ const SendButton = styled.button`
 
 const SendModal = styled.div`
   padding: 20px;
+  margin: 0px auto;
   background-color: white;
   width: 90%;
   border-radius: 10px;

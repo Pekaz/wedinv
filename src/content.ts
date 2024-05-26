@@ -38,7 +38,7 @@ const myContentSpec: ContentSpec = {
   ogTitle: "박성진 ♡ 권수지 청첩장",
   ogDesc: "7월 20일에 결혼합니다.",
   ogImageUrl:
-    "https://drive.google.com/uc?id=1GwfpHwFh5BITIMmX2wgl1TObKLacK_9q",
+    "https://drive.google.com/uc?id=19SOOYVS-myod7de6sBZPeM30mjB5H7po",
 
   groomFullName: "박성진",
   brideFullName: "권수지",
@@ -61,8 +61,8 @@ const myContentSpec: ContentSpec = {
       초록빛 싱그러운 여름,
       보다 크고 깊은 사랑이 완성되는
       그 시작의 자리에 함께해 주시기를 바랍니다.`,
-      `권양호 · 임미영의 딸 수지
-        박시영 · 김연옥의 아들 성진`,
+      `박시영 · 김연옥의 아들 성진
+      권양호 · 임미영의 딸 수지`,
     ],
   },
   groomContact: "tel:01031350378",
