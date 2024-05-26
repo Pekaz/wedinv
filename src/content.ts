@@ -37,7 +37,7 @@ const myContentSpec: ContentSpec = {
   ogTitle: "박성진 ♡ 권수지 청첩장",
   ogDesc: "7월 20일에 결혼합니다.",
   ogImageUrl:
-    "https://drive.google.com/uc?id=1rOqMIkHL7JYuoOfnGBABywkUL0cPfdqW",
+    "https://drive.google.com/uc?id=1GwfpHwFh5BITIMmX2wgl1TObKLacK_9q",
 
   groomFullName: "박성진",
   brideFullName: "권수지",
@@ -72,7 +72,10 @@ const myContentSpec: ContentSpec = {
     { name: "박시영(부)", account: "신한은행 110-048-311363" },
     { name: "김연옥(모)", account: "신한은행 110-195-831956" },
   ],
-  brideGive: [{ name: "권수지", account: "우리은행 1002-962-551597" }],
+  brideGive: [
+    { name: "권수지", account: "우리은행 1002-962-551597" },
+    { name: "권양호(부)", account: "우리은행 126-08-327394" },
+  ],
 };
 
 export default myContentSpec;

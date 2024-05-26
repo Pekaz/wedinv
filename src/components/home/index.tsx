@@ -234,12 +234,13 @@ const CopyTextButton = styled.button`
   border: none;
   background: none;
   font-weight: 200;
+  color: #489cff;
 
   svg {
     width: 20px;
     height: 20px;
     padding: 2px;
-    color: #999;
+    color: #489cff;
     vertical-align: sub;
   }
 `;
