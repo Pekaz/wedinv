@@ -160,7 +160,7 @@ const PinchPhoto = ({ src, onZoom }: PinchPhotoProps) => {
   return (
     <QuickPinchZoom ref={pz} onUpdate={handleUpdate} draggableUnZoomed={false}>
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img ref={imgRef} src={src} alt="" />
+      <img ref={imgRef} src={src} alt="" loading="lazy" />
     </QuickPinchZoom>
   );
 };
