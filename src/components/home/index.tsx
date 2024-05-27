@@ -387,7 +387,7 @@ const Home = ({ content: c }: HomeProps) => {
       )}
       <SectionHr />
       <SectionHeader>오시는 길</SectionHeader>
-      <Image src={mapPic} width={400} alt="" />
+      <Image src={mapPic} width={300} alt="" />
       <p>
         {c.venue.address} <br />
         {c.venue.address2}

@@ -67,7 +67,14 @@ const myContentSpec: ContentSpec = {
   },
   groomContact: "tel:01031350378",
   brideContact: "tel:01033985746",
-  galleryThumbPosition: {}, // e.g. { "p03.jpeg": "bottom" },
+  galleryThumbPosition: {
+    "02.png": "top",
+    "03.png": "top",
+    "04.png": "bottom",
+    "08.png": "top",
+    "09.png": "top",
+    "12.png": "center",
+  }, // e.g. { "p03.jpeg": "bottom" },
   groomGive: [
     { name: "박성진", account: "우리은행 1002-941-504941" },
     { name: "박시영(부)", account: "신한은행 110-048-311363" },
