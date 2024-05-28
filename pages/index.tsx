@@ -31,7 +31,7 @@ export const getStaticProps: GetStaticProps = () => {
     .readdirSync("./public/photos/gallery")
     .sort()
     .map((fname) => ({
-      url: "/photos/gallery/" + fname,
+      url: "/photos/org/" + fname,
       ...(myContentSpec.galleryThumbPosition[fname]
         ? { objectPosition: myContentSpec.galleryThumbPosition[fname] }
         : {}),
