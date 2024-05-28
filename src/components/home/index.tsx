@@ -265,7 +265,7 @@ const CopyText = ({ text }: { text: string }) => {
   );
 };
 
-const SendButton = styled.button`
+const SendButton = styled.button<{ marginLeft?: string }>`
   ${TextSansStyle}
   width: 120px;
   height: 40px;
@@ -274,6 +274,7 @@ const SendButton = styled.button`
   color: black;
   border: 1px solid gray;
   font-weight: 200;
+  margin-left: ${({ marginLeft }) => marginLeft ?? "0px"};
 `;
 
 const SendModal = styled.div`
@@ -421,9 +422,10 @@ const Home = ({ content: c }: HomeProps) => {
               </SendModal>
             </FloatModal>
           )}
-        </p>
-        <p>
-          <SendButton onClick={() => handleSendBrideModalClick()}>
+          <SendButton
+            marginLeft="10px"
+            onClick={() => handleSendBrideModalClick()}
+          >
             신부측
           </SendButton>
           {showSendBrideModal && (

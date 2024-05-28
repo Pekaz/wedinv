@@ -76,14 +76,14 @@ const myContentSpec: ContentSpec = {
     "12.png": "center",
   }, // e.g. { "p03.jpeg": "bottom" },
   groomGive: [
-    { name: "박성진", account: "우리은행 1002-941-504941" },
     { name: "박시영(부)", account: "신한은행 110-048-311363" },
     { name: "김연옥(모)", account: "신한은행 110-195-831956" },
+    { name: "박성진", account: "우리은행 1002-941-504941" },
   ],
   brideGive: [
-    { name: "권수지", account: "우리은행 1002-962-551597" },
     { name: "권양호(부)", account: "우리은행 126-08-327394" },
     { name: "임미영(모)", account: "우리은행 1002-740-314961" },
+    { name: "권수지", account: "우리은행 1002-962-551597" },
   ],
 };
 
