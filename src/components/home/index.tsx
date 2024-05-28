@@ -379,7 +379,7 @@ const Home = ({ content: c }: HomeProps) => {
       {showGalleryModal && (
         <Modal handleClose={handleGalleryModalClose}>
           <PhotoGallery
-            photos={c.photos}
+            photos={c.orgPhotos}
             initialSlide={lastClickedGalleryItem}
             onClose={handleGalleryModalClose}
           />
