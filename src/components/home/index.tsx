@@ -296,12 +296,15 @@ const Home = ({ content: c }: HomeProps) => {
   const [showGalleryModal, setShowGalleryModal] = useState(false);
   const [lastClickedGalleryItem, setLastClickedGalleryItem] =
     useState<number>();
-
   const handlePhotoClick = (i: number) => {
     setLastClickedGalleryItem(i);
     setShowGalleryModal(true);
   };
   const handleGalleryModalClose = () => setShowGalleryModal(false);
+  const [showMapModal, setShowMapModal] = useState(false);
+  const handleMapClick = () => {
+    setShowMapModal(!showMapModal);
+  };
 
   const [showSendGroomModal, setShowSendGroomModal] = useState(false);
   const [showSendBrideModal, setShowSendBrideModal] = useState(false);
@@ -388,7 +391,14 @@ const Home = ({ content: c }: HomeProps) => {
       )}
       <SectionHr />
       <SectionHeader>오시는 길</SectionHeader>
-      <Image src={mapPic} width={300} alt="" />
+      <Image src={mapPic} width={300} alt="" onClick={() => handleMapClick()} />
+      {showMapModal && (
+        <Modal handleClose={handleMapClick}>
+          <div onClick={handleMapClick}>
+            <PinchPhoto src={mapPic.src} onZoom={() => {}} />
+          </div>
+        </Modal>
+      )}
       <p>
         {c.venue.address} <br />
         {c.venue.address2}
